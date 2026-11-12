@@ -1,4 +1,3 @@
-"C:\Program Files\Java\jdk-23\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2025.3\lib\idea_rt.jar=59896" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath C:\Users\khali\IdeaProjects\Lab8\out\production\Lab7 Main
 
 ===== Employee Management System =====
 1. Add Employee or Student
@@ -7,8 +6,8 @@
 4. Update Salary
 5. Exit
 Enter choice: 1
-Enter ID: 101
-Enter Name: khalid
+Enter ID: 201
+Enter Name: Khalid
 Enter Age: 22
 Enter Salary (0 for Student): 2000
 Person added successfully.
@@ -20,7 +19,7 @@ Person added successfully.
 4. Update Salary
 5. Exit
 Enter choice: 1
-Enter ID: 102
+Enter ID: 202
 Enter Name: Ahmed
 Enter Age: 20
 Enter Salary (0 for Student): 0
@@ -32,64 +31,15 @@ Person added successfully.
 3. Display All Records
 4. Update Salary
 5. Exit
-Enter choice: 1
-Enter ID: 101
-Enter Name: Ali
-Enter Age: 25
-Enter Salary (0 for Student): 3000
-Employee ID already exists.
-
-===== Employee Management System =====
-1. Add Employee or Student
-2. Remove Employee by ID
-3. Display All Records
-4. Update Salary
-5. Exit
 Enter choice: 3
 
 ------ HR Records ------
-Name: khalid, Age: 22, ID: 101, Salary: $7500.0
-[Internship Student] Name: Ahmed, Age: 20, ID: 102, Payment: $0.0
+Name: Khalid, Age: 22, ID: 201, Salary: $7500.0
+[Internship Student] Name: Ahmed, Age: 20, ID: 202, Payment: $0.0
 ------------------------
 Total Students: 1
 Total Employees: 1
 Total Persons: 2
-
-===== Employee Management System =====
-1. Add Employee or Student
-2. Remove Employee by ID
-3. Display All Records
-4. Update Salary
-5. Exit
-Enter choice: 4
-Enter Employee ID: 102
-Enter New Salary: 4500
-Cannot update salary for Student.
-
-===== Employee Management System =====
-1. Add Employee or Student
-2. Remove Employee by ID
-3. Display All Records
-4. Update Salary
-5. Exit
-Enter choice: 2
-Enter Employee ID to remove: 102
-Person removed successfully.
-
-===== Employee Management System =====
-1. Add Employee or Student
-2. Remove Employee by ID
-3. Display All Records
-4. Update Salary
-5. Exit
-Enter choice: 3
-
------- HR Records ------
-Name: khalid, Age: 22, ID: 101, Salary: $7500.0
-------------------------
-Total Students: 0
-Total Employees: 1
-Total Persons: 1
 
 ===== Employee Management System =====
 1. Add Employee or Student

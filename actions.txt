@@ -1,0 +1,9 @@
+Program started
+User selected option: 1
+Attempted to add person with ID: 201
+User selected option: 1
+Attempted to add person with ID: 202
+User selected option: 3
+Displayed all records
+User selected option: 5
+Program exited

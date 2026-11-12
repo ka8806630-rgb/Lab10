@@ -6,6 +6,10 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         HR hrSystem = new HR(10);
 
+        // Load saved data when the program starts
+        hrSystem.loadData();
+        FileManager.logAction("Program started");
+
         int choice;
 
         do {
@@ -18,6 +22,9 @@ public class Main {
             System.out.print("Enter choice: ");
 
             choice = Integer.parseInt(scanner.nextLine());
+
+            // Log user's choice
+            FileManager.logAction("User selected option: " + choice);
 
             switch (choice) {
                 case 1:
@@ -43,16 +50,28 @@ public class Main {
                     }
 
                     hrSystem.addPerson(person);
+
+                    // Save employee data and log action
+                    hrSystem.saveData();
+                    FileManager.logAction(
+                            "Attempted to add person with ID: " + id);
                     break;
 
                 case 2:
                     System.out.print("Enter Employee ID to remove: ");
                     int removeId = Integer.parseInt(scanner.nextLine());
+
                     hrSystem.removeEmployee(removeId);
+
+                    // Save changes and log action
+                    hrSystem.saveData();
+                    FileManager.logAction(
+                            "Attempted to remove person with ID: " + removeId);
                     break;
 
                 case 3:
                     hrSystem.displayAll();
+                    FileManager.logAction("Displayed all records");
                     break;
 
                 case 4:
@@ -63,14 +82,22 @@ public class Main {
                     double newSalary = Double.parseDouble(scanner.nextLine());
 
                     hrSystem.updateSalary(updateId, newSalary);
+
+                    // Save updated salary and log action
+                    hrSystem.saveData();
+                    FileManager.logAction(
+                            "Attempted salary update for ID: " + updateId
+                                    + ", new salary: " + newSalary);
                     break;
 
                 case 5:
                     System.out.println("Exiting program...");
+                    FileManager.logAction("Program exited");
                     break;
 
                 default:
                     System.out.println("Invalid choice.");
+                    FileManager.logAction("Invalid choice: " + choice);
             }
 
         } while (choice != 5);

@@ -1,0 +1,2 @@
+Employee,201,Khalid,22,2000.0
+Student,202,Ahmed,20,0.0
