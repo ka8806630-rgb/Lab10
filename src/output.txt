@@ -1,15 +1,18 @@
+"C:\Program Files\Java\jdk-23\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2025.3\lib\idea_rt.jar=54506" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath C:\Users\khali\IdeaProjects\Lab10\out\production\Lab10 Main
+Employee data loaded successfully.
 
 ===== Employee Management System =====
 1. Add Employee or Student
 2. Remove Employee by ID
 3. Display All Records
 4. Update Salary
-5. Exit
+5. Display Employees with Salary > 5000
+6. Exit
 Enter choice: 1
-Enter ID: 201
+Enter ID: 301
 Enter Name: Khalid
 Enter Age: 22
-Enter Salary (0 for Student): 2000
+Enter Salary (0 for Student): 6000
 Person added successfully.
 
 ===== Employee Management System =====
@@ -17,12 +20,13 @@ Person added successfully.
 2. Remove Employee by ID
 3. Display All Records
 4. Update Salary
-5. Exit
+5. Display Employees with Salary > 5000
+6. Exit
 Enter choice: 1
-Enter ID: 202
+Enter ID: 302
 Enter Name: Ahmed
-Enter Age: 20
-Enter Salary (0 for Student): 0
+Enter Age: 30
+Enter Salary (0 for Student): 9000
 Person added successfully.
 
 ===== Employee Management System =====
@@ -30,24 +34,36 @@ Person added successfully.
 2. Remove Employee by ID
 3. Display All Records
 4. Update Salary
-5. Exit
-Enter choice: 3
-
------- HR Records ------
-Name: Khalid, Age: 22, ID: 201, Salary: $7500.0
-[Internship Student] Name: Ahmed, Age: 20, ID: 202, Payment: $0.0
-------------------------
-Total Students: 1
-Total Employees: 1
-Total Persons: 2
+5. Display Employees with Salary > 5000
+6. Exit
+Enter choice: 1
+Enter ID: 303
+Enter Name: Ali
+Enter Age: 25
+Enter Salary (0 for Student): 3000
+Person added successfully.
 
 ===== Employee Management System =====
 1. Add Employee or Student
 2. Remove Employee by ID
 3. Display All Records
 4. Update Salary
-5. Exit
+5. Display Employees with Salary > 5000
+6. Exit
 Enter choice: 5
+
+--- Employees with Salary > 5000 ---
+Name: Ahmed, Age: 30, ID: 302, Salary: $33750.0
+Name: Khalid, Age: 22, ID: 301, Salary: $22500.0
+
+===== Employee Management System =====
+1. Add Employee or Student
+2. Remove Employee by ID
+3. Display All Records
+4. Update Salary
+5. Display Employees with Salary > 5000
+6. Exit
+Enter choice: 6
 Exiting program...
 
 Process finished with exit code 0
