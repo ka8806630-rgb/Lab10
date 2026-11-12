@@ -23,12 +23,12 @@ public class Main {
         } else {
             double salary = Double.parseDouble(salaryInput);
             person = new Employee(id, name, age, salary);
+            person.currency = new USDollar();
         }
 
         hrSystem.addPerson(person);
         hrSystem.displayAll();
 
-        hrSystem.updateSalary(100, 2000.0);
         hrSystem.updateSalary(id, 4500.0);
 
         hrSystem.displayAll();

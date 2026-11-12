@@ -1,4 +1,5 @@
 public class Employee extends Person {
+    public CurrencyStrategy currency;
     private int id;
     private double salary;
 
@@ -30,8 +31,19 @@ public class Employee extends Person {
         this.salary = salary;
     }
 
+
     @Override
     public String toString() {
-        return super.toString() + ", ID: " + id + ", Salary: $" + salary;
+        double displayedSalary = salary;
+        String symbol = "$";
+
+        if (currency != null) {
+            displayedSalary = currency.changeTo((float) salary);
+            symbol = currency.getSymbol();
+        }
+
+        return super.toString() + ", ID: " + id
+                + ", Salary: " + symbol + displayedSalary;
     }
+
 }
