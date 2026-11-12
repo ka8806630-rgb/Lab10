@@ -7,3 +7,14 @@ User selected option: 3
 Displayed all records
 User selected option: 5
 Program exited
+Program started
+User selected option: 1
+Attempted to add person with ID: 301
+User selected option: 1
+Attempted to add person with ID: 302
+User selected option: 1
+Attempted to add person with ID: 303
+User selected option: 5
+Displayed employees with salary > 5000
+User selected option: 6
+Program exited

@@ -18,12 +18,12 @@ public class Main {
             System.out.println("2. Remove Employee by ID");
             System.out.println("3. Display All Records");
             System.out.println("4. Update Salary");
-            System.out.println("5. Exit");
+            System.out.println("5. Display Employees with Salary > 5000");
+            System.out.println("6. Exit");
             System.out.print("Enter choice: ");
 
             choice = Integer.parseInt(scanner.nextLine());
 
-            // Log user's choice
             FileManager.logAction("User selected option: " + choice);
 
             switch (choice) {
@@ -50,9 +50,8 @@ public class Main {
                     }
 
                     hrSystem.addPerson(person);
-
-                    // Save employee data and log action
                     hrSystem.saveData();
+
                     FileManager.logAction(
                             "Attempted to add person with ID: " + id);
                     break;
@@ -62,9 +61,8 @@ public class Main {
                     int removeId = Integer.parseInt(scanner.nextLine());
 
                     hrSystem.removeEmployee(removeId);
-
-                    // Save changes and log action
                     hrSystem.saveData();
+
                     FileManager.logAction(
                             "Attempted to remove person with ID: " + removeId);
                     break;
@@ -82,15 +80,20 @@ public class Main {
                     double newSalary = Double.parseDouble(scanner.nextLine());
 
                     hrSystem.updateSalary(updateId, newSalary);
-
-                    // Save updated salary and log action
                     hrSystem.saveData();
+
                     FileManager.logAction(
                             "Attempted salary update for ID: " + updateId
                                     + ", new salary: " + newSalary);
                     break;
 
                 case 5:
+                    hrSystem.displayHighSalaryEmployees();
+                    FileManager.logAction(
+                            "Displayed employees with salary > 5000");
+                    break;
+
+                case 6:
                     System.out.println("Exiting program...");
                     FileManager.logAction("Program exited");
                     break;
@@ -100,7 +103,7 @@ public class Main {
                     FileManager.logAction("Invalid choice: " + choice);
             }
 
-        } while (choice != 5);
+        } while (choice != 6);
 
         scanner.close();
     }

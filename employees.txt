@@ -1,2 +1,5 @@
 Employee,201,Khalid,22,2000.0
 Student,202,Ahmed,20,0.0
+Employee,301,Khalid,22,6000.0
+Employee,302,Ahmed,30,9000.0
+Employee,303,Ali,25,3000.0

@@ -1,6 +1,6 @@
 
 import java.util.LinkedHashMap;
-
+import java.util.Comparator;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -126,6 +126,16 @@ public final class HR {
         } catch (NumberFormatException e) {
             System.out.println("Invalid number in saved data.");
         }
+    }
+
+    public void displayHighSalaryEmployees() {
+        System.out.println("\n--- Employees with Salary > 5000 ---");
+
+        records.values().stream()
+                .filter(person -> !(person instanceof Student))
+                .filter(person -> person.getSalary() > 5000)
+                .sorted(Comparator.comparingDouble(Employee::getSalary).reversed())
+                .forEach(person -> System.out.println(person));
     }
 
 }
